@@ -48,7 +48,7 @@ MoonLight采集到的性能数据是基本和Instruments保持一致的。具体
 Warning! For iOS, do not use it on AppStore release. Recommend use it on debug mode.
 
 ```
-pod ’MoonLight_iOS‘, :configurations => ['Debug']
+pod 'MoonLight_iOS', :configurations => ['Debug']
 ```
 
 - macOS:
