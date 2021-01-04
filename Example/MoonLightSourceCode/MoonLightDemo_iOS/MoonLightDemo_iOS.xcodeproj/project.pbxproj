@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0EA786AA255E696A005CD0DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA786A9255E696A005CD0DD /* AppDelegate.m */; };
+		0EA786AD255E696A005CD0DD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA786AC255E696A005CD0DD /* SceneDelegate.m */; };
+		0EA786B0255E696A005CD0DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA786AF255E696A005CD0DD /* ViewController.m */; };
+		0EA786B3255E696A005CD0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA786B1255E696A005CD0DD /* Main.storyboard */; };
+		0EA786B5255E696D005CD0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA786B4255E696D005CD0DD /* Assets.xcassets */; };
+		0EA786B8255E696D005CD0DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA786B6255E696D005CD0DD /* LaunchScreen.storyboard */; };
+		0EA786BB255E696D005CD0DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA786BA255E696D005CD0DD /* main.m */; };
+		0ECC574C2583866100364192 /* MoonLight.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC57342583866000364192 /* MoonLight.m */; };
+		0ECC574D2583866100364192 /* MLSystemCPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC57362583866000364192 /* MLSystemCPU.m */; };
+		0ECC574E2583866100364192 /* MLiOSGPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC573A2583866000364192 /* MLiOSGPU.m */; };
+		0ECC574F2583866100364192 /* MLAppMemory.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC573E2583866000364192 /* MLAppMemory.mm */; };
+		0ECC57542583866100364192 /* MLAppCPU.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC574A2583866100364192 /* MLAppCPU.mm */; };
+		0EE86F9F258718680042EC42 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ECC575B258387A100364192 /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0EA786A5255E696A005CD0DD /* MoonLightDemo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonLightDemo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EA786A8255E696A005CD0DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0EA786A9255E696A005CD0DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0EA786AB255E696A005CD0DD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		0EA786AC255E696A005CD0DD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		0EA786AE255E696A005CD0DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0EA786AF255E696A005CD0DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0EA786B2255E696A005CD0DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0EA786B4255E696D005CD0DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0EA786B7255E696D005CD0DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0EA786B9255E696D005CD0DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EA786BA255E696D005CD0DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0ECC57342583866000364192 /* MoonLight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoonLight.m; sourceTree = "<group>"; };
+		0ECC57362583866000364192 /* MLSystemCPU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSystemCPU.m; sourceTree = "<group>"; };
+		0ECC57372583866000364192 /* MLSystemCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSystemCPU.h; sourceTree = "<group>"; };
+		0ECC57392583866000364192 /* MLiOSGPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLiOSGPU.h; sourceTree = "<group>"; };
+		0ECC573A2583866000364192 /* MLiOSGPU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLiOSGPU.m; sourceTree = "<group>"; };
+		0ECC573B2583866000364192 /* IOKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOKit.h; sourceTree = "<group>"; };
+		0ECC573D2583866000364192 /* MLAppMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAppMemory.h; sourceTree = "<group>"; };
+		0ECC573E2583866000364192 /* MLAppMemory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MLAppMemory.mm; sourceTree = "<group>"; };
+		0ECC57482583866100364192 /* MoonLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoonLight.h; sourceTree = "<group>"; };
+		0ECC574A2583866100364192 /* MLAppCPU.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MLAppCPU.mm; sourceTree = "<group>"; };
+		0ECC574B2583866100364192 /* MLAppCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAppCPU.h; sourceTree = "<group>"; };
+		0ECC575B258387A100364192 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EA786A2255E696A005CD0DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EE86F9F258718680042EC42 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EA7869C255E696A005CD0DD = {
+			isa = PBXGroup;
+			children = (
+				0EA786A7255E696A005CD0DD /* MoonLightDemo_iOS */,
+				0EA786A6255E696A005CD0DD /* Products */,
+				0EA7872E255E965C005CD0DD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0EA786A6255E696A005CD0DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EA786A5255E696A005CD0DD /* MoonLightDemo_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0EA786A7255E696A005CD0DD /* MoonLightDemo_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0ECC57332583866000364192 /* MoonLight */,
+				0EA786A8255E696A005CD0DD /* AppDelegate.h */,
+				0EA786A9255E696A005CD0DD /* AppDelegate.m */,
+				0EA786AB255E696A005CD0DD /* SceneDelegate.h */,
+				0EA786AC255E696A005CD0DD /* SceneDelegate.m */,
+				0EA786AE255E696A005CD0DD /* ViewController.h */,
+				0EA786AF255E696A005CD0DD /* ViewController.m */,
+				0EA786B1255E696A005CD0DD /* Main.storyboard */,
+				0EA786B4255E696D005CD0DD /* Assets.xcassets */,
+				0EA786B6255E696D005CD0DD /* LaunchScreen.storyboard */,
+				0EA786B9255E696D005CD0DD /* Info.plist */,
+				0EA786BA255E696D005CD0DD /* main.m */,
+			);
+			path = MoonLightDemo_iOS;
+			sourceTree = "<group>";
+		};
+		0EA7872E255E965C005CD0DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ECC575B258387A100364192 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0ECC57332583866000364192 /* MoonLight */ = {
+			isa = PBXGroup;
+			children = (
+				0ECC57482583866100364192 /* MoonLight.h */,
+				0ECC57342583866000364192 /* MoonLight.m */,
+				0ECC57352583866000364192 /* SystemCPU */,
+				0ECC57382583866000364192 /* iOSGPU */,
+				0ECC573C2583866000364192 /* AppMemory */,
+				0ECC57492583866100364192 /* AppCPU */,
+			);
+			path = MoonLight;
+			sourceTree = "<group>";
+		};
+		0ECC57352583866000364192 /* SystemCPU */ = {
+			isa = PBXGroup;
+			children = (
+				0ECC57372583866000364192 /* MLSystemCPU.h */,
+				0ECC57362583866000364192 /* MLSystemCPU.m */,
+			);
+			path = SystemCPU;
+			sourceTree = "<group>";
+		};
+		0ECC57382583866000364192 /* iOSGPU */ = {
+			isa = PBXGroup;
+			children = (
+				0ECC57392583866000364192 /* MLiOSGPU.h */,
+				0ECC573A2583866000364192 /* MLiOSGPU.m */,
+				0ECC573B2583866000364192 /* IOKit.h */,
+			);
+			path = iOSGPU;
+			sourceTree = "<group>";
+		};
+		0ECC573C2583866000364192 /* AppMemory */ = {
+			isa = PBXGroup;
+			children = (
+				0ECC573D2583866000364192 /* MLAppMemory.h */,
+				0ECC573E2583866000364192 /* MLAppMemory.mm */,
+			);
+			path = AppMemory;
+			sourceTree = "<group>";
+		};
+		0ECC57492583866100364192 /* AppCPU */ = {
+			isa = PBXGroup;
+			children = (
+				0ECC574B2583866100364192 /* MLAppCPU.h */,
+				0ECC574A2583866100364192 /* MLAppCPU.mm */,
+			);
+			path = AppCPU;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0EA786A4255E696A005CD0DD /* MoonLightDemo_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EA786BE255E696D005CD0DD /* Build configuration list for PBXNativeTarget "MoonLightDemo_iOS" */;
+			buildPhases = (
+				0EA786A1255E696A005CD0DD /* Sources */,
+				0EA786A2255E696A005CD0DD /* Frameworks */,
+				0EA786A3255E696A005CD0DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoonLightDemo_iOS;
+			productName = MoonLightDemo_iOS;
+			productReference = 0EA786A5255E696A005CD0DD /* MoonLightDemo_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0EA7869D255E696A005CD0DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				ORGANIZATIONNAME = Agora;
+				TargetAttributes = {
+					0EA786A4255E696A005CD0DD = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 0EA786A0255E696A005CD0DD /* Build configuration list for PBXProject "MoonLightDemo_iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0EA7869C255E696A005CD0DD;
+			productRefGroup = 0EA786A6255E696A005CD0DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EA786A4255E696A005CD0DD /* MoonLightDemo_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EA786A3255E696A005CD0DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EA786B8255E696D005CD0DD /* LaunchScreen.storyboard in Resources */,
+				0EA786B5255E696D005CD0DD /* Assets.xcassets in Resources */,
+				0EA786B3255E696A005CD0DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EA786A1255E696A005CD0DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EA786B0255E696A005CD0DD /* ViewController.m in Sources */,
+				0ECC574F2583866100364192 /* MLAppMemory.mm in Sources */,
+				0EA786AA255E696A005CD0DD /* AppDelegate.m in Sources */,
+				0ECC57542583866100364192 /* MLAppCPU.mm in Sources */,
+				0ECC574E2583866100364192 /* MLiOSGPU.m in Sources */,
+				0ECC574C2583866100364192 /* MoonLight.m in Sources */,
+				0EA786BB255E696D005CD0DD /* main.m in Sources */,
+				0ECC574D2583866100364192 /* MLSystemCPU.m in Sources */,
+				0EA786AD255E696A005CD0DD /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0EA786B1255E696A005CD0DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EA786B2255E696A005CD0DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0EA786B6255E696D005CD0DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EA786B7255E696D005CD0DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0EA786BC255E696D005CD0DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0EA786BD255E696D005CD0DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0EA786BF255E696D005CD0DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDPG69R49Z;
+				INFOPLIST_FILE = MoonLightDemo_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.agora.MoonLightDemo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0EA786C0255E696D005CD0DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JDPG69R49Z;
+				INFOPLIST_FILE = MoonLightDemo_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "io.agora.MoonLightDemo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EA786A0255E696A005CD0DD /* Build configuration list for PBXProject "MoonLightDemo_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EA786BC255E696D005CD0DD /* Debug */,
+				0EA786BD255E696D005CD0DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EA786BE255E696D005CD0DD /* Build configuration list for PBXNativeTarget "MoonLightDemo_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EA786BF255E696D005CD0DD /* Debug */,
+				0EA786C0255E696D005CD0DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0EA7869D255E696A005CD0DD /* Project object */;
+}
