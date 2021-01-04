@@ -17,9 +17,9 @@ Pod::Spec.new do |spec|
 
   spec.name         = "MoonLight_macOS"
   spec.version      = "2.0.1"
-  spec.summary      = "MoonLight_macOS is a Performance Test tool for macOS."
+  spec.summary      = "MoonLight_macOS is a Performance Test Kit for macOS."
   spec.description  = <<-DESC
-	MoonLight is a performance test tool on iOS and macOS. It can capture App Memory, App CPU, System CPU and GPU accurately and easily.
+	MoonLight is a performance test kit on iOS and macOS. It can capture App Memory, App CPU, System CPU and GPU accurately and easily.
                    DESC
   spec.homepage     = "https://github.com/AgoraIO-Community/MoonLight"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
