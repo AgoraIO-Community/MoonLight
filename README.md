@@ -57,6 +57,30 @@ pod 'MoonLight_iOS', :configurations => ['Debug']
 pod 'MoonLight_MacOS'
 ```
 
+## Usage
+
+```
+// Step1: create MoonLight instance and set sampling interval.
+	_moonLight = [[MoonLight alloc]initWithDelegate:self timeInterval:1];
+
+// Step2: startTimer
+	[_moonLight startTimer];
+
+
+// Step3: through the callback, you can get all the performance data every interval.
+- (void)captureOutputAppCPU:(float)appCPU systemCPU:(float)systemCPU appMemory:(float)appMemory gpuUsage:(float)gpuUsage gpuInfo:(NSString *)gpuInfo {
+	NSLog(@"appMemory:%f", appMemory);
+    NSLog(@"appCPU:%f", appCPU);
+    NSLog(@"gpuUsage:%f", gpuUsage);
+    NSLog(@"systemCPU:%f", systemCPU);
+    NSLog(@"gpuInfo:%@", gpuInfo);
+}
+
+// Step4：if you want stop capture the performance data, use "stopTimer".
+	[_moonLight stopTimer];
+
+```
+
 ## MoonLight 自测的结果
 iOS/Mac MoonLight 自身的性能消耗非常低，几乎可以忽略不计；测试的过程中，性能输出稳定；App CPU、System CPU、App Memory、GPU 可以和Instruments或者活动监视器结果保持一致。
 
