@@ -46,6 +46,7 @@
 - (void)captureOutputAppCPU:(float)appCPU systemCPU:(float)systemCPU appMemory:(float)appMemory gpuUsage:(float)gpuUsage gpuInfo:(NSString *)gpuInfo {
     NSLog(@"appMemory:%f", appMemory);
     NSLog(@"appCPU:%f", appCPU);
+    NSLog(@"systemCPU:%f", systemCPU);
     NSLog(@"gpuUsage:%f", gpuUsage);
     NSLog(@"gpuInfo:%@", gpuInfo);
     dispatch_async(dispatch_get_main_queue(), ^{
