@@ -63,11 +63,11 @@ pod 'MoonLight_MacOS'
 // Step1: create MoonLight instance and set sampling interval.
 	_moonLight = [[MoonLight alloc]initWithDelegate:self timeInterval:1];
 
-// Step2: startTimer
+// Step2: start timer.
 	[_moonLight startTimer];
 
 
-// Step3: through the callback, you can get all the performance data every interval.
+// Step3: through the callback, you can get all the performance data per interval.
 - (void)captureOutputAppCPU:(float)appCPU systemCPU:(float)systemCPU appMemory:(float)appMemory gpuUsage:(float)gpuUsage gpuInfo:(NSString *)gpuInfo {
 	NSLog(@"appMemory:%f", appMemory);
     NSLog(@"appCPU:%f", appCPU);
@@ -76,7 +76,7 @@ pod 'MoonLight_MacOS'
     NSLog(@"gpuInfo:%@", gpuInfo);
 }
 
-// Step4：if you want stop capture the performance data, use "stopTimer".
+// Step4：if you want to stop capturing the performance data, use "stopTimer".
 	[_moonLight stopTimer];
 
 ```
