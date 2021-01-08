@@ -42,7 +42,7 @@ Perfdog is a closed source performance test tool from Tencent. And it does have 
 
 2. Perfdog is not a automated performance test tool. It need user to point UI button to start or stop performance testing. Perfdog's advantage is data visualization.
 
-3. Perfdog is not an open source project. And it did have serious bug on iOS14 that the App CPU captured by Perfdog is wrong. If use Perfdog to test your app, maybe you will find a new serious bug in the future, because we do not konw Pefdog source code.
+3. Perfdog is not an open source project. And it did have serious bug on iOS14 that the App CPU captured by Perfdog is wrong. If use Perfdog to test your app, maybe you will find a new serious bug in the future, because we do not konw Pefdog's source code.
 
 ## Requirements
 - iOS 8.0+
@@ -62,7 +62,7 @@ pod 'MoonLight_iOS', :configurations => ['Debug']
 - macOS:
 
 ```
-pod 'MoonLight_MacOS'
+pod 'MoonLight_macOS'
 ```
 
 ## Usage
@@ -78,10 +78,10 @@ pod 'MoonLight_MacOS'
 // Step3: through the callback, you can get all the performance data per interval.
 - (void)captureOutputAppCPU:(float)appCPU systemCPU:(float)systemCPU appMemory:(float)appMemory gpuUsage:(float)gpuUsage gpuInfo:(NSString *)gpuInfo {
 	NSLog(@"appMemory:%f", appMemory);
-    NSLog(@"appCPU:%f", appCPU);
-    NSLog(@"gpuUsage:%f", gpuUsage);
-    NSLog(@"systemCPU:%f", systemCPU);
-    NSLog(@"gpuInfo:%@", gpuInfo);
+	NSLog(@"appCPU:%f", appCPU);
+	NSLog(@"gpuUsage:%f", gpuUsage);
+	NSLog(@"systemCPU:%f", systemCPU);
+	NSLog(@"gpuInfo:%@", gpuInfo);
 }
 
 // Step4：if you want to stop capturing the performance data, use "stopTimer".

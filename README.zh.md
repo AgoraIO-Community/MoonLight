@@ -57,7 +57,7 @@ pod 'MoonLight_iOS', :configurations => ['Debug']
 - macOS:
 
 ```
-pod 'MoonLight_MacOS'
+pod 'MoonLight_macOS'
 ```
 
 ## Usage
@@ -73,10 +73,10 @@ pod 'MoonLight_MacOS'
 // Step3: through the callback, you can get all the performance data per interval.
 - (void)captureOutputAppCPU:(float)appCPU systemCPU:(float)systemCPU appMemory:(float)appMemory gpuUsage:(float)gpuUsage gpuInfo:(NSString *)gpuInfo {
 	NSLog(@"appMemory:%f", appMemory);
-    NSLog(@"appCPU:%f", appCPU);
-    NSLog(@"gpuUsage:%f", gpuUsage);
-    NSLog(@"systemCPU:%f", systemCPU);
-    NSLog(@"gpuInfo:%@", gpuInfo);
+	NSLog(@"appCPU:%f", appCPU);
+	NSLog(@"gpuUsage:%f", gpuUsage);
+	NSLog(@"systemCPU:%f", systemCPU);
+	NSLog(@"gpuInfo:%@", gpuInfo);
 }
 
 // Step4：if you want to stop capturing the performance data, use "stopTimer".
