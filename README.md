@@ -1,40 +1,48 @@
 # MoonLight
-## 什么是MoonLight？
-MoonLight是iOS/Mac上的性能测试组件，它可以单独集成在任何App中实现自动化性能数据的采集，你可以非常轻松的获取到App CPU、System CPU、App Memory、System GPU 以及 GPU Info的数据。
 
-## MoonLight的命名
+*English | [中文](README.zh.md)*
 
-**MoonLight**，它的中文意思名为**月光**。月光弥漫在地球之上是宁静且自然的，月光会给予地球上的人们以指引。而月光的寓意恰好和我们开发性能测试组件的出发点相契合。
+## What is MoonLight？
 
-我们希望iOS/Mac的性能测试也能像月光一样，轻松且自然。MoonLight有着更低的性能消耗，更容易的使用方式，更精准的性能数据。它将帮助开发团队更快速更精确的定位性能问题，进而推动性能优化和提升。帮助测试团队更快更准的获取性能数据，提升测试效率。
+MoonLight is a performance test kit for iOS/macOS app which can be integrated into your app to implement performance data captured easily. MoonLight can provide App CPU, System CPU, App Memory, System GPU and GPU info accuratly. 
 
-## 对比其他的性能测试工具
+## Why named it as MoonLight?
+
+We name it as **MoonLight** because we hope the kit can make test easy and efficient, just like the tranquil moonlight guides wanderers in the dark night and gives us a feeling of serenity and comfort.
+
+MoonLight has low performance consumption and is easy to use. The performance data captured by MoonLight is accurately. It will help development team locate the performance problems more quickly and accurately to promote the performance optimization. Help test team get performance data faster and more accurately to improve test efficiency.
+
+## Comparison
 ### Instruments
-MoonLight采集到的性能数据是基本和Instruments保持一致的。具体的优劣对比如下：
+The peformance data captured by MoonLight is the same as Instruments. The specific advantages and disadvantages are as follows.
 
-1. Instruments无法实现性能自动化,无法将获取到的性能数据提取出来进行分析，最后提供出去的性能数据准确度不够，存在人为误差。MonnLight可以解决这个问题。
+1. Instruments can not be implemented to automate performance testing and can not get the specific data to be analysed scientifically. By comparison, MoonLight can provide the performance data accuratly and can support to implement performance test automation.
 
-2. Instruments无法实现远程性能测试，自然也无法实现高并发的性能测试，通常来说需要一台设备连接USB线后测试，然后一台测试完再测试下一台。MoonLight可以一次性测试非常多台，也没有必须连接数据线的要求。
+2. Instruments can not to be implemented to test remotely. You can not test your app in your home while the device in your company. Therefore, you can not test plenty of devices at the same time. By comparison, MoonLight can support it.
 
-3. 高版本的Instruments无法测试一些低端系统机器的性能，MoonLight可以完美支持。
+3. Low system iOS devices cannot by tested on latest version Insturuments. By comparison, MoonLight do not have the limitaion.
 
-4. 对于Mac, Instruments是不支持GPU的输出，MoonLight支持。进过测试，GPU的输出和Mac自带的活动管理器GPU输出保持一致。
+4. Insturments on macOS do not support gpu captureing. By comparison, MoonLight supports. The Moonlight's gpu info is the same as the activity monitor on macOS.
 
-5. Instruments优点是数据可视化，并且可以提供内存泄漏测试。MoonLight暂时不提供数据可视化，但是由于MoonLight是可编程的，当开发者拿到相关的性能数据后, 可以自行实现数据上报或者可视化的处理。
-
+5. Instruments also have advantages, such as Allocations and Leaks to provide memory leaks testing. Instruments can also provide data visualization. By comparison, MoonLight is programmable. Developers can use MoonLight to implement data visualization and automation test need.
+ 
 ### GT
-1. GT 不支持Mac的性能测试，MoonLight支持。
+GT is an opensource performance test project from Tencent. And GT also has many disvantages.
 
-2. GT 采集到的App Memory数据和Instruments是不一致的。GT 无法输出 GPU、System CPU, 但是MoonLight可以。
+1. GT is not support macOS. By comparison, MoonLight supports.
 
-3. GT集成到App中，需要添加非常多的依赖库，取消掉Bitcode支持，自身也比较庞大，并且会增加App的包大小。MoonLight更轻量化，对于iOS仅仅只需要增加一个系统库，对于Mac不需要增加任何的系统库。 
+2. GT's App Memory is not the same as Instruments. And GT can not output GPU and System CPU. By comparison, MoonLight supports.
+
+3. When GT is integrated in user's app, the app should add too many dependent frameworks and should cancel Bitcode support. Moreover, GT‘s package size is much bigger than MoonLight. MoonLight only needs add one framework on iOS and does not need add any framework on macOS.
 
 ### Perfdog
-1. Perfdog无法支持Mac的性能测试。
+Perfdog is a closed source performance test tool from Tencent. And it does have many disvantages.
 
-2. Perfdog并非是一个自动化的性能测试工具，优点是数据可视化。
+1. Perfdog cannot sppport macOS.
 
-3. Perfdog并非是一个开源的测试工具，之前在iOS 14上出现过App CPU不准的Bug, 而我们也并不清楚其实现的原理和代码，未来依旧有可能在某些系统上出现性能项测试不准的情况。
+2. Perfdog is not a automation performance test tool. It need user to point UI button to start or stop performance testing. Perfdog's advantage is data visualization.
+
+3. Perfdog is not an open source project. And it did have serious bug on iOS14 that the App CPU captured by Perfdog is wrong. If use Perfdog to test your app, maybe you will find a new serious bug in the future, because we do not konw Pefdog source code.
 
 ## Requirements
 - iOS 8.0+
@@ -81,37 +89,35 @@ pod 'MoonLight_MacOS'
 
 ```
 
-## MoonLight 自测的结果
-iOS/Mac MoonLight 自身的性能消耗非常低，几乎可以忽略不计；测试的过程中，性能输出稳定；App CPU、System CPU、App Memory、GPU 可以和Instruments或者活动监视器结果保持一致。
-
-### 一、MoonLight VS Instruments
+## Test Result
+The performance consumption of MoonLight is very low. It's almost negligible. And the output is stable under the same environment. App CPU, System CPU, App Memory and iOS GPU is the same as Instruments and the macOS GPU is the same as Activity Monitor.
+### MoonLight VS Instruments
 - iOS
 
-![avatar](MoonLightVSInstruments.png)
+![avatar](MoonLightVSInstruments_en.png)
 
 - macOS
 
-![avatar](MacInstrumentsVSMoonLight.png)
+![avatar](MacInstrumentsVSMoonLight_en.png)
 
-备注：MoonLight对CPU有做归一化处理. CPU(MoonLight) = CPU(Instruments) / 核心数
+Comment：CPU(MoonLight) = CPU(Instruments) / Core Num
 
-### 二、MoonLight 自身的性能消耗
-测试case: 打开App，打开MoonLight的检测，测试性能data1。打开App, 不打开MoonLight的检测，测试性能data2。性能消耗 = data1 - data2
+### The Perforamnce Consumption of MoonLight
+Test case: Use Instruments, Open your app, enable MoonLight detection and get the performance data1. Than, open your app again, do not enable MoonLight detection and get the performance data2. Performance consumption = data2 - data1.
 
 - iOS
 
-App Memory 消耗 = 7.38-7.34 = 0.04Mb ；App CPU 消耗 = （2.1%-0.1%）/ （6核） = 0.33% ；GPU = 0% ，并且整个性能测试阶段，数据波动稳定，不会出现MoonLight的开启造成性能有不稳定变化。
-
-测试设备：iPhone XS iOS 14.2 六核
+App Memory = 7.38 - 7.34 = 0.04Mb, App CPU = （2.1%-0.1%）/ （6 core） = 0.33%, GPU = 0%.
+Device: iPhone XS iOS14.2 , Core number: 6
 
 - macOS
 
-App Memory 消耗 = 14.42-14.36 = 0.06Mb ；App CPU 消耗 = （0.08%-0.0%）/ （4核） = 0.02% ；GPU = 0% ，并且整个性能测试阶段，数据波动稳定，不会出现MoonLight的开启造成性能有不稳定变化。
+App Memory = 14.42-14.36 = 0.06Mb, App CPU = (0.08% - 0.0%) / (4 core) = 0.02%, GPU = 0%.
+Device: Macbook Pro 2017 13.3 Intel i5 , System: BigSur 11.0.1
 
-测试设备：Macbook Pro 2017 13.3 Intel i5 , System: BigSur 11.0.1
 
 ## Author
-LiuJunJie 
+Echoo J
 
 Email: liujunjie@agora.io
 
