@@ -8,7 +8,7 @@ MoonLight is a performance test kit for iOS/macOS app which can be integrated in
 
 ## Why named it as MoonLight?
 
-We name it as **MoonLight** because we hope the kit can make test easy and efficient, just like the tranquil moonlight guides wanderers in the dark night and gives us a feeling of serenity and comfort.
+We name it as **MoonLight** because we hope it can make performance test easier and more efficient, just like the tranquil moonlight guides wanderers in the dark night and gives us a feeling of serenity and comfort.
 
 MoonLight has low performance consumption and is easy to use. The performance data captured by MoonLight is accurately. It will help dev team locate the performance problems more quickly and accurately to promote the performance optimization. Help test team get performance data faster and more accurately to improve test efficiency.
 
