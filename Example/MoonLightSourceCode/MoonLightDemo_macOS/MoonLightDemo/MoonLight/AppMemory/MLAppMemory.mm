@@ -1,6 +1,5 @@
 //
 //  MLAppMemory.m
-//  GPU4MacDemo
 //
 //  Created by LJJ on 2020/11/11.
 //  Copyright © 2020 Agora. All rights reserved.
