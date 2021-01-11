@@ -3,7 +3,7 @@
 *[English](README.md) | 中文*
 
 ## 什么是MoonLight？
-MoonLight是iOS/Mac上的性能测试组件，它可以单独集成在任何App中实现自动化性能数据的采集，你可以非常轻松的获取到App CPU、System CPU、App Memory、System GPU 以及 GPU Info的数据。
+MoonLight是iOS/Mac上的性能测试组件，它可以单独集成在任何App中实现自动化性能数据的采集，你可以非常轻松的获取到App CPU、System CPU、App Memory、System GPU以及 GPU Info的数据。
 
 ## MoonLight的命名
 
@@ -21,19 +21,19 @@ MoonLight采集到的性能数据是基本和Instruments保持一致的。具体
 
 3. 高版本的Instruments无法测试一些低端系统机器的性能，MoonLight可以完美支持。
 
-4. 对于Mac, Instruments是不支持GPU的输出，MoonLight支持。进过测试，GPU的输出和Mac自带的活动管理器GPU输出保持一致。
+4. 对于macOS上的App, Instruments是不支持GPU的输出，MoonLight支持。进过测试，GPU的输出和macOS自带的活动管理器GPU输出保持一致。
 
 5. Instruments优点是数据可视化，并且可以提供内存泄漏测试。MoonLight暂时不提供数据可视化，但是由于MoonLight是可编程的，当开发者拿到相关的性能数据后, 可以自行实现数据上报或者可视化的处理。
 
 ### GT
-1. GT 不支持Mac的性能测试，MoonLight支持。
+1. GT不支持macOS，MoonLight支持。
 
-2. GT 采集到的App Memory数据和Instruments是不一致的。GT 无法输出 GPU、System CPU, 但是MoonLight可以。
+2. GT采集到的App Memory数据和Instruments是不一致的。GT 无法输出 GPU、System CPU, 但是MoonLight可以。
 
 3. GT集成到App中，需要添加非常多的依赖库，取消掉Bitcode支持，自身也比较庞大，并且会增加App的包大小。MoonLight更轻量化，对于iOS仅仅只需要增加一个系统库，对于Mac不需要增加任何的系统库。 
 
 ### Perfdog
-1. Perfdog无法支持Mac的性能测试。
+1. Perfdog无法支持macOS上的App的性能测试。
 
 2. Perfdog并非是一个自动化的性能测试工具，优点是数据可视化。
 

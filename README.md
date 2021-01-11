@@ -20,11 +20,11 @@ The peformance data captured by MoonLight is the same as Instruments. The specif
 
 2. Instruments can not to be implemented to test remotely. You can not test your app in your home while the device in your company. Therefore, you can not test plenty of devices at the same time. By comparison, MoonLight can support it.
 
-3. Low system iOS devices cannot by tested on the latest version Insturuments. By comparison, MoonLight do not have the limitaion.
+3. Low system iOS devices cannot by tested on the latest version Insturuments. By comparison, MoonLight doesn't have the limitaion.
 
-4. Insturments on macOS do not support gpu captureing. By comparison, MoonLight supports. The Moonlight's gpu info is the same as the activity monitor on macOS.
+4. Insturments on macOS doesn't support gpu captureing. By comparison, MoonLight supports. The Moonlight's gpu info is the same as the activity monitor on macOS.
 
-5. Instruments also have advantages, such as the Allocations and Leaks to provide memory leaks testing. Instruments can also provide data visualization. By comparison, MoonLight is programmable. Developers can use MoonLight to implement data visualization and automated test need.
+5. Instruments also has advantages, such as the Allocations and Leaks to provide memory leaks testing. Instruments can also provide data visualization. By comparison, MoonLight is programmable. Developers can use MoonLight to implement data visualization and automated test need.
  
 ### GT
 GT is an opensource performance test project from Tencent. And GT also has many disvantages.
@@ -33,16 +33,16 @@ GT is an opensource performance test project from Tencent. And GT also has many 
 
 2. GT's App Memory is not the same as Instruments. And GT can not output GPU and System CPU. By comparison, MoonLight supports.
 
-3. When GT is integrated in user's app, the app should add too many dependent frameworks and should disable Bitcode support. Moreover, GT‘s package size is much bigger than MoonLight. MoonLight needs to add only one framework on iOS and does not need to add any framework on macOS.
+3. When GT is integrated in user's app, the app should add too many dependent frameworks and should disable Bitcode support. Moreover, GT‘s package size is much bigger than MoonLight. MoonLight only needs to add one framework on iOS and does not need to add any framework on macOS.
 
 ### Perfdog
 Perfdog is a closed source performance test tool from Tencent. And it does have many disvantages.
 
-1. Perfdog cannot sppport macOS.
+1. Perfdog cannot sppport macOS app.
 
-2. Perfdog is not a automated performance test tool. It need user to point UI button to start or stop performance testing. Perfdog's advantage is data visualization.
+2. Perfdog is not a automated performance test tool. It needs user to point UI button to start or stop performance testing. Perfdog's advantage is data visualization.
 
-3. Perfdog is not an open source project. And it did have serious bug on iOS14 that the App CPU captured by Perfdog is wrong. If use Perfdog to test your app, maybe you will find a new serious bug in the future, because we do not konw Pefdog's source code.
+3. Perfdog is not an open source project. And it did have serious bug on iOS14 that the App CPU captured by Perfdog is wrong. If use Perfdog to test your app, maybe you will find a new serious bug in the future because we do not konw Pefdog's source code.
 
 ## Requirements
 - iOS 8.0+
@@ -90,7 +90,7 @@ pod 'MoonLight_macOS'
 ```
 
 ## Test Result
-The performance consumption of MoonLight is very low. It's almost negligible. And the output is stable under the same environment. App CPU, System CPU, App Memory and iOS GPU are the same as Instruments and the macOS GPU is the same as Activity Monitor.
+The performance consumption of MoonLight is very low. It's almost negligible. App CPU, System CPU, App Memory and iOS GPU are the same as Instruments and the macOS GPU is the same as Activity Monitor.
 ### MoonLight VS Instruments
 - iOS
 
