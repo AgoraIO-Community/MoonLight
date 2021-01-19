@@ -5,7 +5,7 @@
 ## 什么是MoonLight？
 MoonLight是iOS/Mac上的性能测试组件，它可以单独集成在任何App中实现自动化性能数据的采集，你可以非常轻松的获取到App CPU、System CPU、App Memory、System GPU以及 GPU Info的数据。
 
-## MoonLight的命名
+## MoonLight的愿景
 
 **MoonLight**，它的中文意思名为**月光**。月光弥漫在地球之上是宁静且自然的，月光会给予地球上的人们以指引。而月光的寓意恰好和我们开发性能测试组件的出发点相契合。
 
