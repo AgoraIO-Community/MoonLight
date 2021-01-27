@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MoonLight_iOS"
-  spec.version      = "2.0.1"
+  spec.version      = "2.0.2"
   spec.summary      = "MoonLight_iOS is a Performance Test Kit for iOS."
   spec.description  = <<-DESC
 	MoonLight is a performance test kit on iOS and macOS. It can capture App Memory, App CPU, System CPU and GPU accurately and easily.
