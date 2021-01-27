@@ -23,11 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface MoonLight : NSObject
-@property (nonatomic, assign) float appCPU;
-@property (nonatomic, assign) float systemCPU;
-@property (nonatomic, assign) float appMemory;
-@property (nonatomic, assign) float gpuUsage;
-@property (nonatomic, copy) NSString *gpuInfo;
+@property (nonatomic, assign, readonly) float appCPU;
+@property (nonatomic, assign, readonly) float systemCPU;
+@property (nonatomic, assign, readonly) float appMemory;
+@property (nonatomic, assign, readonly) float gpuUsage;
+@property (nonatomic, copy, readonly) NSString *gpuInfo;
 @property (nonatomic, assign) double timeInterval;
 @property (nullable, nonatomic, weak) id<MoonLightDelegate> delegate;
 

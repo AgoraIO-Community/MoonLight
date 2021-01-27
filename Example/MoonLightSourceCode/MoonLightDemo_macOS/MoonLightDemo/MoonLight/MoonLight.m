@@ -10,6 +10,11 @@
 @interface MoonLight ()
 @property (nonatomic, strong) dispatch_source_t timer;
 @property (nonatomic, strong) dispatch_queue_t queue;
+@property (nonatomic, assign, readwrite) float appCPU;
+@property (nonatomic, assign, readwrite) float systemCPU;
+@property (nonatomic, assign, readwrite) float appMemory;
+@property (nonatomic, assign, readwrite) float gpuUsage;
+@property (nonatomic, copy, readwrite) NSString *gpuInfo;
 @end
 
 @implementation MoonLight
@@ -47,7 +52,11 @@ static MoonLight *moonLight = nil;
         moonLight = [[MoonLight alloc]init];
     });
     moonLight.delegate = delegate;
-    moonLight.timeInterval = timeInterval;
+    if (timeInterval <= 0) {
+        moonLight.timeInterval = 1;
+    } else {
+        moonLight.timeInterval = timeInterval;
+    }
     return moonLight;
 }
 
