@@ -114,9 +114,7 @@ App Memory 消耗 = 14.42-14.36 = 0.06Mb ；App CPU 消耗 = （0.08%-0.0%）/ �
 测试设备：Macbook Pro 2017 13.3 Intel i5 , System: BigSur 11.0.1
 
 ## Author
-Echoo J
-
-Email: liujunjie@agora.io
+Echoo J 
 
 ## License
 MoonLight is available under the MIT license. See the LICENSE file for more info.

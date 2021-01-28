@@ -121,7 +121,5 @@ Device: Macbook Pro 2017 13.3 Intel i5 , System: BigSur 11.0.1
 ## Author
 Echoo J
 
-Email: liujunjie@agora.io
-
 ## License
 MoonLight is available under the MIT license. See the LICENSE file for more info.
