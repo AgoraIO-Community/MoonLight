@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -91,7 +91,6 @@
 				2A0F717CFE1C513BC55E6B0A /* Pods-MoonLightDemo.debug.xcconfig */,
 				F6DA6DA3B8742FC41F189BC9 /* Pods-MoonLightDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -343,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A0F717CFE1C513BC55E6B0A /* Pods-MoonLightDemo.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MoonLightDemo/MoonLightDemo.entitlements;
@@ -364,6 +364,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6DA6DA3B8742FC41F189BC9 /* Pods-MoonLightDemo.release.xcconfig */;
 			buildSettings = {
+				ARCHS = x86_64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MoonLightDemo/MoonLightDemo.entitlements;
