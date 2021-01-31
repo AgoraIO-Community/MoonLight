@@ -4,7 +4,7 @@
 target 'MoonLightDemo_iOS' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-	pod 'MoonLight_iOS', :podspec => '../../../MoonLight_iOS.podspec'
+	pod 'MoonLight_iOS', :podspec => '../../../MoonLight_iOS.podspec', :configurations => ['Debug']
   # Pods for MoonLightDemo_iOS
 
 end
