@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E5D3324265E4A9A0028DC64 /* MLSuspendingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D3322265E4A9A0028DC64 /* MLSuspendingView.m */; };
 		0EA786AA255E696A005CD0DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA786A9255E696A005CD0DD /* AppDelegate.m */; };
-		0EA786AD255E696A005CD0DD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA786AC255E696A005CD0DD /* SceneDelegate.m */; };
 		0EA786B0255E696A005CD0DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA786AF255E696A005CD0DD /* ViewController.m */; };
 		0EA786B3255E696A005CD0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA786B1255E696A005CD0DD /* Main.storyboard */; };
 		0EA786B5255E696D005CD0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EA786B4255E696D005CD0DD /* Assets.xcassets */; };
@@ -18,11 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E5D3322265E4A9A0028DC64 /* MLSuspendingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLSuspendingView.m; path = ../../../MoonLightSourceCode/MoonLightDemo_iOS/MoonLightDemo_iOS/MLSuspendingView.m; sourceTree = "<group>"; };
+		0E5D3323265E4A9A0028DC64 /* MLSuspendingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLSuspendingView.h; path = ../../../MoonLightSourceCode/MoonLightDemo_iOS/MoonLightDemo_iOS/MLSuspendingView.h; sourceTree = "<group>"; };
 		0EA786A5255E696A005CD0DD /* MoonLightDemo_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonLightDemo_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA786A8255E696A005CD0DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EA786A9255E696A005CD0DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0EA786AB255E696A005CD0DD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		0EA786AC255E696A005CD0DD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		0EA786AE255E696A005CD0DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0EA786AF255E696A005CD0DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0EA786B2255E696A005CD0DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,10 +70,10 @@
 			children = (
 				0EA786A8255E696A005CD0DD /* AppDelegate.h */,
 				0EA786A9255E696A005CD0DD /* AppDelegate.m */,
-				0EA786AB255E696A005CD0DD /* SceneDelegate.h */,
-				0EA786AC255E696A005CD0DD /* SceneDelegate.m */,
 				0EA786AE255E696A005CD0DD /* ViewController.h */,
 				0EA786AF255E696A005CD0DD /* ViewController.m */,
+				0E5D3323265E4A9A0028DC64 /* MLSuspendingView.h */,
+				0E5D3322265E4A9A0028DC64 /* MLSuspendingView.m */,
 				0EA786B1255E696A005CD0DD /* Main.storyboard */,
 				0EA786B4255E696D005CD0DD /* Assets.xcassets */,
 				0EA786B6255E696D005CD0DD /* LaunchScreen.storyboard */,
@@ -215,9 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EA786B0255E696A005CD0DD /* ViewController.m in Sources */,
+				0E5D3324265E4A9A0028DC64 /* MLSuspendingView.m in Sources */,
 				0EA786AA255E696A005CD0DD /* AppDelegate.m in Sources */,
 				0EA786BB255E696D005CD0DD /* main.m in Sources */,
-				0EA786AD255E696A005CD0DD /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
