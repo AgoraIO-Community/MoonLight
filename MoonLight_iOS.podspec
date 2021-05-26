@@ -16,10 +16,10 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MoonLight_iOS"
-  spec.version      = "2.0.6"
+  spec.version      = "2.0.8"
   spec.summary      = "MoonLight_iOS is a Performance Test Kit for iOS."
   spec.description  = <<-DESC
-	MoonLight is a performance test kit on iOS and macOS. It can capture App Memory, App CPU, System CPU and GPU accurately and easily.
+	MoonLight is a performance test kit on iOS and macOS. It can capture App Memory, App CPU, System CPU, GPU, FPS and ANR accurately and easily.
                    DESC
   spec.homepage     = "https://github.com/AgoraIO-Community/MoonLight"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
@@ -27,7 +27,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"  
   spec.source       = { :git => "https://github.com/AgoraIO-Community/MoonLight.git", :tag => "#{spec.version}" }
   spec.source_files = "MoonLight_iOS/**/**/*"
-  spec.public_header_files = ['MoonLight_iOS/MoonLight/*.h', 'MoonLight_iOS/MoonLight/iOSGPU/MLiOSGPU.h','MoonLight_iOS/MoonLight/AppMemory/*.h', 'MoonLight_iOS/MoonLight/SystemCPU/*.h', 'MoonLight_iOS/MoonLight/AppCPU/*.h']
+  spec.public_header_files = ['MoonLight_iOS/MoonLight/*.h', 'MoonLight_iOS/MoonLight/iOSGPU/MLiOSGPU.h','MoonLight_iOS/MoonLight/AppMemory/*.h', 'MoonLight_iOS/MoonLight/SystemCPU/*.h', 'MoonLight_iOS/MoonLight/AppCPU/*.h',"MoonLight_iOS/MoonLight/FPS/*.h","MoonLight_iOS/MoonLight/ANR/*.h"]
   spec.private_header_files = ['MoonLight_iOS/MoonLight/iOSGPU/IOKit.h']
   spec.framework    = "IOKit"
   spec.requires_arc = true
