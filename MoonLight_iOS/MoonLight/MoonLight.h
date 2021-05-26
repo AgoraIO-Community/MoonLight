@@ -11,6 +11,7 @@
 #import "MLSystemCPU.h"
 
 #if TARGET_OS_IOS
+#import "MLFPS.h"
 #import "MLiOSGPU.h"
 #elif TARGET_OS_MAC
 #import "MLMacGPU.h"
@@ -27,9 +28,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) float systemCPU;
 @property (nonatomic, assign, readonly) float appMemory;
 @property (nonatomic, assign, readonly) float gpuUsage;
+@property (nonatomic, assign, readonly) double fps;
 @property (nonatomic, copy, readonly) NSString *gpuInfo;
 @property (nonatomic, assign) double timeInterval;
 @property (nullable, nonatomic, weak) id<MoonLightDelegate> delegate;
+@property (nonatomic, assign) BOOL isANR;
+@property (nonatomic, assign, readonly) NSInteger ANRCount;
 
 - (instancetype)initWithDelegate:(id<MoonLightDelegate>)delegate timeInterval:(double) timeInterval;
 - (void)startTimer;
