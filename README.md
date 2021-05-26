@@ -89,10 +89,10 @@ pod 'MoonLight_macOS'
 	
 // ANR: Optional for iOS:
 
-// if you want to get the ANR caused by the thread you want to monitor, use the API as follows:  
+// if you want to get the ANR caused by the thread you want to monitor, use the API as follows:
 	_detectPing = [MLANRDetectPing initWithMonitoringQueue:dispatch_get_main_queue()];
-   [_detectPing start];
-   NSLog(@"The ANR based on ping detection and the count is %ld", _detectPing.count);
+	[_detectPing start];
+	NSLog(@"The ANR based on ping detection and the count is %ld", _detectPing.count);
 
 // if you want to get ANR caused by cpu or gpu, use the API as follows:
 	_moonLight.isANR = true;
