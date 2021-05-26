@@ -3,7 +3,7 @@
 *[English](README.md) | 中文*
 
 ## 什么是MoonLight？
-MoonLight是iOS/Mac上的性能测试组件，它可以单独集成在任何App中实现自动化性能数据的采集，你可以非常轻松的获取到App CPU、System CPU、App Memory、System GPU以及 GPU Info的数据。
+MoonLight是iOS/Mac上的性能测试组件，它可以单独集成在任何App中实现自动化性能数据的采集，你可以非常轻松的获取到App CPU、System CPU、App Memory、System GPU、GPU Info、iOS FPS和ANR的数据。
 
 ## MoonLight的愿景
 
@@ -82,6 +82,18 @@ pod 'MoonLight_macOS'
 // Step4：if you want to stop capturing the performance data, use "stopTimer".
 	[_moonLight stopTimer];
 
+
+// ANR: Optional for iOS:
+
+// if you want to get the ANR caused by the thread you want to monitor, use the api as follows:  
+	_detectPing = [MLANRDetectPing initWithMonitoringQueue:dispatch_get_main_queue()];
+   [_detectPing start];
+   NSLog(@"The ANR based on ping detection and the count is %ld", _detectPing.count);
+
+// if you want to get ANR caused by cpu or gpu, use the api as follows:
+	_moonLight.isANR = true;
+	NSLog(@"The ANR based on gpu/cpu detection and the count is %ld", _moonLight.count);
+	
 ```
 
 ## MoonLight 自测的结果
