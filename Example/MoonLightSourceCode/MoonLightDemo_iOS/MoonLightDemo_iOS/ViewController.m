@@ -21,20 +21,21 @@
 @property (weak, nonatomic) IBOutlet UILabel *fps;
 @property (nonatomic, strong) MLSuspendingView *suspendingView;
 @property (nonatomic, strong) MLANRDetectPing *detectPing;
+@property (weak, nonatomic) IBOutlet UIButton *createSuspendingView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.suspendingView = [MLSuspendingView sharedSuspendingView];
+    self.suspendingView = [[MLSuspendingView alloc]init];
     _isStart = true;
     _moonLight = [[MoonLight alloc]initWithDelegate:self timeInterval:1];
     [_moonLight startTimer];
     _detectPing = [MLANRDetectPing initWithMonitoringQueue:dispatch_get_main_queue()];
     [_detectPing start];
-    // 测试卡顿
-    [NSThread sleepForTimeInterval:4];
+    // Test ANR
+    [NSThread sleepForTimeInterval:2];
 }
 
 
@@ -47,6 +48,28 @@
         [_stopAndStartTimer setTitle:@"stopTimer" forState:UIControlStateNormal] ;
     }
     _isStart = !_isStart;
+}
+
+- (IBAction)createAndRemove:(id)sender {
+    if (_isStart) {
+        [_moonLight stopTimer];
+        _moonLight.delegate = nil;
+        _moonLight = nil;
+        [_detectPing stop];
+        _detectPing = nil;
+        [_suspendingView closeSuspendingView];
+        _suspendingView = nil;
+        [_createSuspendingView setTitle:@"createSuspendingView" forState:UIControlStateNormal];
+    } else {
+        self.suspendingView = [[MLSuspendingView alloc]init];
+        _moonLight = [[MoonLight alloc]initWithDelegate:self timeInterval:1];
+        [_moonLight startTimer];
+        _detectPing = [MLANRDetectPing initWithMonitoringQueue:dispatch_get_main_queue()];
+        [_detectPing start];
+        [_createSuspendingView setTitle:@"removeSuspendingView" forState:UIControlStateNormal];
+    }
+    _isStart = !_isStart;
+    
 }
 
 

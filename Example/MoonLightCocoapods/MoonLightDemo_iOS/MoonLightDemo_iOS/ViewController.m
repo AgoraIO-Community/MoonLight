@@ -27,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.suspendingView = [MLSuspendingView sharedSuspendingView];
+    self.suspendingView = [[MLSuspendingView alloc]init];
     _isStart = true;
     _moonLight = [[MoonLight alloc]initWithDelegate:self timeInterval:1];
     [_moonLight startTimer];

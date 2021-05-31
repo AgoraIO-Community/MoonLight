@@ -24,7 +24,7 @@
     self = [super init];
     if (self) {
         self.isMonitoring = false;
-        self.timeOutInerval = 3;
+        self.timeOutInerval = 1;
         self.queue = dispatch_queue_create("AgoraANRQueue", nil);
         self.semaphore = dispatch_semaphore_create(0);
         self.count = 0;

@@ -16,14 +16,6 @@
 
 
 @implementation MLSuspendingView
-+ (MLSuspendingView *)sharedSuspendingView{
-    static dispatch_once_t onceToken;
-    static MLSuspendingView *suspendingView;
-    dispatch_once(&onceToken, ^{
-        suspendingView = [[MLSuspendingView alloc] init];
-    });
-    return suspendingView;
-}
 
 - (instancetype)init{
     if (self == [super init]) {
@@ -58,7 +50,7 @@
 }
 
 - (void)closeSuspendingView{
-    [_window resignKeyWindow];
+    [_window removeFromSuperview];
     _window = nil;
 }
 @end

@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UILabel * infoLabel;
 
-+ (MLSuspendingView *)sharedSuspendingView;
 - (void)closeSuspendingView;
 
 @end
