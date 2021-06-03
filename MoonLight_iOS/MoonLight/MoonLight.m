@@ -95,11 +95,11 @@ static MoonLight *moonLight = nil;
             self.gpuInfo = macGpu.gpuInfo;
         #endif
             if (self.isANR) {
-                if (self.lastAppCPU >= 75.0 && self.appCPU >= 75.0 ) {
+                if (self.lastAppCPU >= 80.0 && self.appCPU >= 80.0 ) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         NSString *symblols = [BSBacktraceLogger bs_backtraceOfAllThread];
                         if (symblols != nil) {
-                            NSLog(@"连续两次CPU超75，记录卡顿：");
+                            NSLog(@"连续两次CPU超80，记录卡顿：");
                             NSLog(@"%@", symblols);
                             self.ANRCount += 1;
                         }
