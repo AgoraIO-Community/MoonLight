@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MLANRDetectPing : NSObject
-// 记录基于Ping触发的ANR的次数
+// 记录基于线程卡顿触发的ANR的次数
 @property (nonatomic, assign, readonly) NSInteger count;
 
 + (instancetype)initWithMonitoringQueue:(dispatch_queue_t)monitoringQueue;

@@ -20,7 +20,9 @@
 NS_ASSUME_NONNULL_BEGIN
 @protocol MoonLightDelegate <NSObject>
 - (void)captureOutputAppCPU:(float)appCPU systemCPU:(float)systemCPU appMemory:(float)appMemory gpuUsage:(float)gpuUsage gpuInfo:(NSString *)gpuInfo;
-
+@optional
+- (void)captureOutputCpuAnr:(NSString *)symbols cpuAnrSum:(NSInteger)cpuAnrSum;
+- (void)captureOutputGpuAnr:(NSString *)symbols gpuAnrSum:(NSInteger)gpuAnrSum;
 @end
 
 @interface MoonLight : NSObject
@@ -33,7 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) double timeInterval;
 @property (nullable, nonatomic, weak) id<MoonLightDelegate> delegate;
 @property (nonatomic, assign) BOOL isANR;
-@property (nonatomic, assign, readonly) NSInteger ANRCount;
+@property (nonatomic, assign, readonly) NSInteger cpuAnrCount;
+@property (nonatomic, assign, readonly) NSInteger gpuAnrCount;
 
 - (instancetype)initWithDelegate:(id<MoonLightDelegate>)delegate timeInterval:(double) timeInterval;
 - (void)startTimer;

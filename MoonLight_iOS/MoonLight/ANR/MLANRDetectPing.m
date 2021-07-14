@@ -57,14 +57,14 @@ static MLANRDetectPing *MLMLANRDetectPing;
             [NSThread sleepForTimeInterval:self.timeOutInerval];
             
             if (timeOut == true) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    NSString *symblols = [BSBacktraceLogger bs_backtraceOfAllThread];
-                    if (symblols != nil) {
-                        NSLog(@"发生线程卡顿：");
-                        NSLog(@"%@", symblols);
-                        self.count += 1;
+                NSString *symblols = [BSBacktraceLogger bs_backtraceOfAllThread];
+                if (symblols != nil) {
+                    NSLog(@"基于线程卡顿触发ANR：");
+                    self.count += 1;
+                    if (self.delegate && [self.delegate respondsToSelector:@selector(anrOutputStackFromPing:anrSum:)]) {
+                        [self.delegate anrOutputStackFromPing:symblols anrSum:self.count];
                     }
-                });
+                }
             }
             dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
         }

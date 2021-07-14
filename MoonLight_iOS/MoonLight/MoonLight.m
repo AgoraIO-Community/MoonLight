@@ -6,7 +6,10 @@
 //
 
 #import "MoonLight.h"
+
+#if TARGET_OS_IOS
 #import "BSBacktraceLogger.h"
+#endif
 
 @interface MoonLight ()
 @property (nonatomic, strong) dispatch_source_t timer;
@@ -16,7 +19,8 @@
 @property (nonatomic, assign, readwrite) float appMemory;
 @property (nonatomic, assign, readwrite) float gpuUsage;
 @property (nonatomic, copy, readwrite) NSString *gpuInfo;
-@property (nonatomic, assign, readwrite) NSInteger ANRCount;
+@property (nonatomic, assign, readwrite) NSInteger cpuAnrCount;
+@property (nonatomic, assign, readwrite) NSInteger gpuAnrCount;
 @property (nonatomic, assign, readwrite) double fps;
 @property (nonatomic, strong) MLFPS *mlFps;
 @property (nonatomic, assign) float lastAppCPU;
@@ -43,7 +47,8 @@
         _systemCPU = [MLSystemCPU getSystemCpuUsage];
         _lastAppCPU = 0;
         _lastGpuUsage = 0;
-        _ANRCount = 0;
+        _cpuAnrCount = 0;
+        _gpuAnrCount = 0;
         _isANR = true;
     }
     return self;
@@ -96,24 +101,24 @@ static MoonLight *moonLight = nil;
         #endif
             if (self.isANR) {
                 if (self.lastAppCPU >= 80.0 && self.appCPU >= 80.0 ) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        NSString *symblols = [BSBacktraceLogger bs_backtraceOfAllThread];
-                        if (symblols != nil) {
-                            NSLog(@"连续两次CPU超80，记录卡顿：");
-                            NSLog(@"%@", symblols);
-                            self.ANRCount += 1;
+                    NSString *symbols = [BSBacktraceLogger bs_backtraceOfAllThread];
+                    if (symbols != nil) {
+                        NSLog(@"连续两次CPU超80，记录卡顿：");
+                        self.cpuAnrCount += 1;
+                        if (_self.delegate && [_self.delegate respondsToSelector:@selector(captureOutputCpuAnr:cpuAnrSum:)]) {
+                            [_self.delegate captureOutputCpuAnr:symbols cpuAnrSum:_self.cpuAnrCount];
                         }
-                    });
+                    }
                 }
                 if (self.lastGpuUsage >= 70.0 && self.gpuUsage >= 70.0) {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        NSString *symblols = [BSBacktraceLogger bs_backtraceOfAllThread];
-                        if (symblols != nil) {
-                            NSLog(@"连续两次GPU超70，记录卡顿：");
-                            NSLog(@"%@", symblols);
-                            self.ANRCount += 1;
+                    NSString *symbols = [BSBacktraceLogger bs_backtraceOfAllThread];
+                    if (symbols != nil) {
+                        NSLog(@"连续两次GPU超70，记录卡顿：");
+                        self.gpuAnrCount += 1;
+                        if (_self.delegate && [_self.delegate respondsToSelector:@selector(captureOutputGpuAnr:gpuAnrSum:)]) {
+                            [_self.delegate captureOutputGpuAnr:symbols gpuAnrSum:_self.gpuAnrCount];
                         }
-                    });
+                    }
                 }
             }
             if (_self.delegate && [_self.delegate respondsToSelector:@selector(captureOutputAppCPU:systemCPU:appMemory:gpuUsage:gpuInfo:)]) {
