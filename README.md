@@ -4,7 +4,7 @@
 
 ## What is MoonLight？
 
-MoonLight is a performance test kit for iOS/macOS app which can be integrated into your app to implement performance data captured easily. MoonLight can provide App CPU, System CPU, App Memory, System GPU ,GPU info, iOS FPS and ANR accuratly. 
+MoonLight is a performance test kit for iOS/macOS app which can be integrated into your app to implement performance data captured easily. MoonLight can provide App CPU, System CPU, App Memory, System GPU ,GPU info, ANR and iOS FPS accuratly. 
 
 ## Why named it as MoonLight?
 
@@ -87,7 +87,7 @@ pod 'MoonLight_macOS'
 // Step4：if you want to stop capturing the performance data, use "stopTimer".
 	[_moonLight stopTimer];
 	
-// ANR: Optional for iOS:
+// ANR (Optional):
 
 // if you want to get the ANR caused by the thread you want to monitor, use the API as follows:
 	_detectPing = [MLANRDetectPing initWithMonitoringQueue:dispatch_get_main_queue()];
