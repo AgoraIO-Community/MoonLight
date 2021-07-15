@@ -7,6 +7,10 @@
 
 #import "MoonLight.h"
 
+#if TARGET_OS_IOS
+#import "BSBacktraceLogger.h"
+#endif
+
 @interface MoonLight ()
 @property (nonatomic, strong) dispatch_source_t timer;
 @property (nonatomic, strong) dispatch_queue_t queue;
@@ -15,6 +19,16 @@
 @property (nonatomic, assign, readwrite) float appMemory;
 @property (nonatomic, assign, readwrite) float gpuUsage;
 @property (nonatomic, copy, readwrite) NSString *gpuInfo;
+@property (nonatomic, assign, readwrite) NSInteger cpuAnrCount;
+@property (nonatomic, assign, readwrite)NSInteger gpuAnrCount;
+@property (nonatomic, assign) float lastAppCPU;
+@property (nonatomic, assign) float lastGpuUsage;
+
+#if TARGET_OS_IOS
+@property (nonatomic, strong) MLFPS *mlFps;
+@property (nonatomic, assign, readwrite) double fps;
+#endif
+
 @end
 
 @implementation MoonLight
@@ -24,7 +38,8 @@
     if (self) {
         #if TARGET_OS_IOS
         _gpuUsage = [MLiOSGPU gpuUsage];
-        _gpuInfo = [NSString stringWithFormat:@"%f", _gpuUsage];
+        _gpuInfo = [NSString stringWithFormat:@"GPUInfo: %f", _gpuUsage];
+        _mlFps = [MLFPS sharedFPSIndicator];
         #else
         MLMacGPU *macGpu = [[MLMacGPU alloc]init];
         _gpuInfo = macGpu.gpuInfo;
@@ -33,6 +48,11 @@
         _appCPU = [MLAppCPU getCpuUsage];
         _appMemory = [MLAppMemory getAppMemory];
         _systemCPU = [MLSystemCPU getSystemCpuUsage];
+        _lastAppCPU = 0;
+        _lastGpuUsage = 0;
+        _cpuAnrCount = 0;
+        _gpuAnrCount = 0;
+        _isANR = true;
     }
     return self;
 }
@@ -66,13 +86,45 @@ static MoonLight *moonLight = nil;
         _queue = dispatch_queue_create("MoonLightQueue", DISPATCH_QUEUE_SERIAL);
         dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, _timeInterval * NSEC_PER_SEC, 0);
         __weak typeof(self) _self = self;
+        #if TARGET_OS_IOS
+        [_mlFps startMonitoring];
+        _mlFps.FPSBlock = ^(float fps) {
+            _self.fps = fps;
+        };
+        #endif
         dispatch_source_set_event_handler(_timer, ^{
             self.appCPU = [MLAppCPU getCpuUsage];
             self.appMemory = [MLAppMemory getAppMemory];
             self.systemCPU = [MLSystemCPU getSystemCpuUsage];
         #if TARGET_OS_IOS
             self.gpuUsage = [MLiOSGPU gpuUsage];
-            self.gpuInfo = [NSString stringWithFormat:@"%f", self.gpuUsage];
+            self.gpuInfo = [NSString stringWithFormat:@"GPUUsage: %f", self.gpuUsage];
+            if (self.isANR) {
+                if (self.lastAppCPU >= 80.0 && self.appCPU >= 80.0 ) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        NSString *symbols = [BSBacktraceLogger bs_backtraceOfAllThread];
+                        if (symbols != nil) {
+                            NSLog(@"连续两次CPU超80，记录卡顿：");
+                            self.cpuAnrCount += 1;
+                            if (_self.delegate && [_self.delegate respondsToSelector:@selector(captureOutputCpuAnr:cpuAnrSum:)]) {
+                                [_self.delegate captureOutputCpuAnr:symbols cpuAnrSum:_self.cpuAnrCount];
+                            }
+                        }
+                    });
+                }
+                if (self.lastGpuUsage >= 70.0 && self.gpuUsage >= 70.0) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        NSString *symbols = [BSBacktraceLogger bs_backtraceOfAllThread];
+                        if (symbols != nil) {
+                            NSLog(@"连续两次GPU超70，记录卡顿：");
+                            self.gpuAnrCount += 1;
+                            if (_self.delegate && [_self.delegate respondsToSelector:@selector(captureOutputGpuAnr:gpuAnrSum:)]) {
+                                [_self.delegate captureOutputGpuAnr:symbols gpuAnrSum:_self.gpuAnrCount];
+                            }
+                        }
+                    });
+                }
+            }
         #else
             MLMacGPU *macGpu = [[MLMacGPU alloc]init];
             self.gpuUsage = macGpu.gpuUsage;
@@ -91,6 +143,11 @@ static MoonLight *moonLight = nil;
         dispatch_source_cancel(_timer);
         _timer = nil;
         _queue = nil;
+        #if TARGET_OS_IOS
+        [_mlFps pauseMonitoring];
+        #endif
+        _lastAppCPU = 0;
+        _lastGpuUsage = 0;
     }
 }
 @end

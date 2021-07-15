@@ -15,6 +15,8 @@
 		0ECC572625837B9B00364192 /* MLMacGPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC571825837B9B00364192 /* MLMacGPU.m */; };
 		0ECC572725837B9B00364192 /* MLCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC571A25837B9B00364192 /* MLCommon.m */; };
 		0ECC572825837B9B00364192 /* MLAppCPU.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC571E25837B9B00364192 /* MLAppCPU.mm */; };
+		0EEE43B8269FDFF500F6E796 /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE43B6269FDFF500F6E796 /* BSBacktraceLogger.m */; };
+		0EEE43B9269FDFF500F6E796 /* MLANRDetectPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE43B7269FDFF500F6E796 /* MLANRDetectPing.m */; };
 		0EFD1558255D5EAA00D4F8BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD1557255D5EAA00D4F8BB /* AppDelegate.m */; };
 		0EFD155B255D5EAA00D4F8BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD155A255D5EAA00D4F8BB /* ViewController.m */; };
 		0EFD155D255D5EAC00D4F8BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFD155C255D5EAC00D4F8BB /* Assets.xcassets */; };
@@ -39,6 +41,10 @@
 		0ECC571C25837B9B00364192 /* MoonLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoonLight.h; sourceTree = "<group>"; };
 		0ECC571E25837B9B00364192 /* MLAppCPU.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MLAppCPU.mm; sourceTree = "<group>"; };
 		0ECC571F25837B9B00364192 /* MLAppCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAppCPU.h; sourceTree = "<group>"; };
+		0EEE43B4269FDFF500F6E796 /* MLANRDetectPing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLANRDetectPing.h; sourceTree = "<group>"; };
+		0EEE43B5269FDFF500F6E796 /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
+		0EEE43B6269FDFF500F6E796 /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
+		0EEE43B7269FDFF500F6E796 /* MLANRDetectPing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLANRDetectPing.m; sourceTree = "<group>"; };
 		0EFD1553255D5EAA00D4F8BB /* MoonLightDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonLightDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFD1556255D5EAA00D4F8BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EFD1557255D5EAA00D4F8BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 				0ECC571025837B9B00364192 /* AppMemory */,
 				0ECC571325837B9B00364192 /* MacGPU */,
 				0ECC571D25837B9B00364192 /* AppCPU */,
+				0EEE43B3269FDFF500F6E796 /* ANR */,
 			);
 			path = MoonLight;
 			sourceTree = "<group>";
@@ -122,6 +129,17 @@
 				0ECC571E25837B9B00364192 /* MLAppCPU.mm */,
 			);
 			path = AppCPU;
+			sourceTree = "<group>";
+		};
+		0EEE43B3269FDFF500F6E796 /* ANR */ = {
+			isa = PBXGroup;
+			children = (
+				0EEE43B5269FDFF500F6E796 /* BSBacktraceLogger.h */,
+				0EEE43B6269FDFF500F6E796 /* BSBacktraceLogger.m */,
+				0EEE43B4269FDFF500F6E796 /* MLANRDetectPing.h */,
+				0EEE43B7269FDFF500F6E796 /* MLANRDetectPing.m */,
+			);
+			path = ANR;
 			sourceTree = "<group>";
 		};
 		0EFD154A255D5EAA00D4F8BB = {
@@ -230,9 +248,11 @@
 				0ECC572525837B9B00364192 /* MLDataSet.m in Sources */,
 				0ECC572825837B9B00364192 /* MLAppCPU.mm in Sources */,
 				0EFD155B255D5EAA00D4F8BB /* ViewController.m in Sources */,
+				0EEE43B8269FDFF500F6E796 /* BSBacktraceLogger.m in Sources */,
 				0EFD1563255D5EAC00D4F8BB /* main.m in Sources */,
 				0ECC572125837B9B00364192 /* MLSystemCPU.m in Sources */,
 				0EFD1558255D5EAA00D4F8BB /* AppDelegate.m in Sources */,
+				0EEE43B9269FDFF500F6E796 /* MLANRDetectPing.m in Sources */,
 				0ECC572625837B9B00364192 /* MLMacGPU.m in Sources */,
 				0ECC572025837B9B00364192 /* MoonLight.m in Sources */,
 				0ECC572325837B9B00364192 /* MLAppMemory.mm in Sources */,
