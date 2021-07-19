@@ -91,6 +91,7 @@ pod 'MoonLight_macOS'
 
 // if you want to get the ANR caused by the thread you want to monitor, use the API as follows:
 	_detectPing = [MLANRDetectPing initWithMonitoringQueue:dispatch_get_main_queue()];
+	_detectPing.delegate = self;
 	[_detectPing start];
 	NSLog(@"The ANR based on ping detection and the count is %ld", _detectPing.count);
 
