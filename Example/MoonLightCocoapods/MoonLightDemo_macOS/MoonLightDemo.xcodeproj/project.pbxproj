@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EE84BE126AAB674002C13DE /* MLSuspendingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE84BDF26AAB673002C13DE /* MLSuspendingView.m */; };
 		0EFD1558255D5EAA00D4F8BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD1557255D5EAA00D4F8BB /* AppDelegate.m */; };
 		0EFD155B255D5EAA00D4F8BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD155A255D5EAA00D4F8BB /* ViewController.m */; };
 		0EFD155D255D5EAC00D4F8BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EFD155C255D5EAC00D4F8BB /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EE84BDF26AAB673002C13DE /* MLSuspendingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLSuspendingView.m; path = ../../../MoonLightSourceCode/MoonLightDemo_macOS/MoonLightDemo/MLSuspendingView.m; sourceTree = "<group>"; };
+		0EE84BE026AAB674002C13DE /* MLSuspendingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLSuspendingView.h; path = ../../../MoonLightSourceCode/MoonLightDemo_macOS/MoonLightDemo/MLSuspendingView.h; sourceTree = "<group>"; };
 		0EFD1553255D5EAA00D4F8BB /* MoonLightDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoonLightDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EFD1556255D5EAA00D4F8BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0EFD1557255D5EAA00D4F8BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 				0EFD1557255D5EAA00D4F8BB /* AppDelegate.m */,
 				0EFD1559255D5EAA00D4F8BB /* ViewController.h */,
 				0EFD155A255D5EAA00D4F8BB /* ViewController.m */,
+				0EE84BE026AAB674002C13DE /* MLSuspendingView.h */,
+				0EE84BDF26AAB673002C13DE /* MLSuspendingView.m */,
 				0EFD155C255D5EAC00D4F8BB /* Assets.xcassets */,
 				0EFD155E255D5EAC00D4F8BB /* Main.storyboard */,
 				0EFD1561255D5EAC00D4F8BB /* Info.plist */,
@@ -208,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EFD155B255D5EAA00D4F8BB /* ViewController.m in Sources */,
+				0EE84BE126AAB674002C13DE /* MLSuspendingView.m in Sources */,
 				0EFD1563255D5EAC00D4F8BB /* main.m in Sources */,
 				0EFD1558255D5EAA00D4F8BB /* AppDelegate.m in Sources */,
 			);

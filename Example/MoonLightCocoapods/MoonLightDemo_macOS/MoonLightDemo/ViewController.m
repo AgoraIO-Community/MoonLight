@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "MoonLight.h"
 #import "MLANRDetectPing.h"
+#import "MLSuspendingView.h"
 
 @interface ViewController() <MoonLightDelegate, MLANRDetectDelegate>
 @property (nonatomic, strong) MoonLight *moonLight;
@@ -20,20 +21,22 @@
 @property (weak) IBOutlet NSTextField *gpuInfo;
 @property (weak) IBOutlet NSTextField *anrCount;
 @property (nonatomic, strong) MLANRDetectPing *detectPing;
-
-
+@property (nonatomic, strong) MLSuspendingView *suspendingView;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _suspendingView = [[MLSuspendingView alloc] init];
     _isStart = true;
     _moonLight = [[MoonLight alloc] initWithDelegate:self timeInterval:1];
     [_moonLight startTimer];
     _detectPing = [MLANRDetectPing initWithMonitoringQueue:dispatch_get_main_queue()];
     _detectPing.delegate = self;
     [_detectPing start];
+    [self.view addSubview:_suspendingView.infoLabel];
+    
     // Test ANR
     [NSThread sleepForTimeInterval:4];
 }
@@ -63,6 +66,7 @@
         self.gpuInfo.stringValue = [NSString stringWithFormat:@"gpuInfo: %@",gpuInfo];
         NSInteger sum = self.moonLight.cpuAnrCount + self.detectPing.count + self.moonLight.gpuAnrCount;
         self.anrCount.stringValue = [NSString stringWithFormat:@"ANRCount: %ld",sum];
+        self.suspendingView.infoLabel.stringValue = [NSString stringWithFormat:@"SysCPU:%.2f\n AppCPU:%.2f\n AppMem:%.2f\n GPU:%.2f\n ANRCount:%ld",systemCPU,appCPU,appMemory,gpuUsage, (long)sum];
     });
 }
 
@@ -76,7 +80,5 @@
 - (void)captureOutputGpuAnr:(NSString *)symbols gpuAnrSum:(NSInteger)gpuAnrSum {
     NSLog(@"通过GPU检测出当前发生了ANR，当前的堆栈地址是：%@，ANR发生的总次数是：%ld",symbols, (long)gpuAnrSum);
 }
-
-
 
 @end

@@ -15,6 +15,7 @@
 		0ECC572625837B9B00364192 /* MLMacGPU.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC571825837B9B00364192 /* MLMacGPU.m */; };
 		0ECC572725837B9B00364192 /* MLCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC571A25837B9B00364192 /* MLCommon.m */; };
 		0ECC572825837B9B00364192 /* MLAppCPU.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC571E25837B9B00364192 /* MLAppCPU.mm */; };
+		0EE84BDE26AAAC94002C13DE /* MLSuspendingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE84BDD26AAAC94002C13DE /* MLSuspendingView.m */; };
 		0EEE43B8269FDFF500F6E796 /* BSBacktraceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE43B6269FDFF500F6E796 /* BSBacktraceLogger.m */; };
 		0EEE43B9269FDFF500F6E796 /* MLANRDetectPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE43B7269FDFF500F6E796 /* MLANRDetectPing.m */; };
 		0EFD1558255D5EAA00D4F8BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFD1557255D5EAA00D4F8BB /* AppDelegate.m */; };
@@ -41,6 +42,8 @@
 		0ECC571C25837B9B00364192 /* MoonLight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoonLight.h; sourceTree = "<group>"; };
 		0ECC571E25837B9B00364192 /* MLAppCPU.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MLAppCPU.mm; sourceTree = "<group>"; };
 		0ECC571F25837B9B00364192 /* MLAppCPU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAppCPU.h; sourceTree = "<group>"; };
+		0EE84BDC26AAAC94002C13DE /* MLSuspendingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLSuspendingView.h; sourceTree = "<group>"; };
+		0EE84BDD26AAAC94002C13DE /* MLSuspendingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLSuspendingView.m; sourceTree = "<group>"; };
 		0EEE43B4269FDFF500F6E796 /* MLANRDetectPing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLANRDetectPing.h; sourceTree = "<group>"; };
 		0EEE43B5269FDFF500F6E796 /* BSBacktraceLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBacktraceLogger.h; sourceTree = "<group>"; };
 		0EEE43B6269FDFF500F6E796 /* BSBacktraceLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBacktraceLogger.m; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				0EFD1557255D5EAA00D4F8BB /* AppDelegate.m */,
 				0EFD1559255D5EAA00D4F8BB /* ViewController.h */,
 				0EFD155A255D5EAA00D4F8BB /* ViewController.m */,
+				0EE84BDC26AAAC94002C13DE /* MLSuspendingView.h */,
+				0EE84BDD26AAAC94002C13DE /* MLSuspendingView.m */,
 				0EFD155C255D5EAC00D4F8BB /* Assets.xcassets */,
 				0EFD155E255D5EAC00D4F8BB /* Main.storyboard */,
 				0EFD1561255D5EAC00D4F8BB /* Info.plist */,
@@ -252,6 +257,7 @@
 				0EFD1563255D5EAC00D4F8BB /* main.m in Sources */,
 				0ECC572125837B9B00364192 /* MLSystemCPU.m in Sources */,
 				0EFD1558255D5EAA00D4F8BB /* AppDelegate.m in Sources */,
+				0EE84BDE26AAAC94002C13DE /* MLSuspendingView.m in Sources */,
 				0EEE43B9269FDFF500F6E796 /* MLANRDetectPing.m in Sources */,
 				0ECC572625837B9B00364192 /* MLMacGPU.m in Sources */,
 				0ECC572025837B9B00364192 /* MoonLight.m in Sources */,
